@@ -1,0 +1,71 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="text-center">NUEVO CONTACTO</h3>
+      <form class="mt-2" (ngSubmit)="saveContact()">
+        <div class="row">
+          <div class="col mt-3">
+            <input type="text" class="form-control form-control-lg" placeholder="Nombre">
+          </div>
+          <div class="col mt-3">
+            <input type="text" class="form-control form-control-lg" placeholder="Apellido">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mt-3">
+            <input type="email" class="form-control form-control-lg" placeholder="Correo">
+          </div>
+          <div class="col mt-3">
+            <input type="text" class="form-control form-control-lg" placeholder="Telefono">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mt-3">
+            <input type="email" class="form-control form-control-lg" placeholder="Url Foto">
+          </div>
+          <button type="submit" class="btn btn-success mt-3 form-control form-control-lg">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar Contacto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="mt-2" (ngSubmit)="saveContact()">
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control form-control-lg" placeholder="Nombre">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control form-control-lg" placeholder="Apellido">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mt-3">
+              <input type="email" class="form-control form-control-lg" placeholder="Correo">
+            </div>
+            <div class="col mt-3">
+              <input type="text" class="form-control form-control-lg" placeholder="Telefono">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mt-3">
+              <input type="email" class="form-control form-control-lg" placeholder="Url Foto">
+            </div>
+            <button type="submit" class="btn btn-success mt-3 form-control form-control-lg">Actuallizar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-listar-contactos></app-listar-contactos>

@@ -1,0 +1,36 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="text-center">Listado de Contactos</h3>
+      <table class="table table-bordered text-center table-hover align-middle">
+        <thead class="table-primary">
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Foto</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contacto of dataContactos, let id=index">
+            <th scope="row">{{id+1}}</th>
+            <td>
+              <img [src]="contacto.img" style="height: 80px; width: 80px;" class="img-fluid rounded-circle" alt="">
+            </td>
+            <td>{{contacto.nombre}}</td>
+            <td>{{contacto.apellido}}</td>
+            <td>{{contacto.correo}}</td>
+            <td>{{contacto.telefono}}</td>
+            <td>
+              <a data-bs-toggle="modal" data-bs-target="#exampleModal">editar
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
